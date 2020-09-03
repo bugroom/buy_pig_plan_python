@@ -53,7 +53,7 @@ def get_url_list():
     """
     file_list = os.listdir('assets')
     filepath = os.path.join('assets', file_list[random.randint(0, len(file_list) - 1)])
-    with open(filepath) as f:
+    with open(filepath,'r', encoding='UTF-8') as f:
         url_list = json.load(f)
     return url_list
 
